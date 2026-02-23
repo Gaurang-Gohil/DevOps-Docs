@@ -18,8 +18,10 @@ jobs:
           docker build -t my-app:latest .
 
       - name: Run container
-        run: |
-          docker run -d --name my-container my-app
-    
-      - name: Show container logs
+        run: docker run -d -p 3000:3000 --name my-container my-app
+
+      - name: Wait for container
+        run: sleep 5
+
+      - name: Show logs
         run: docker logs my-container
