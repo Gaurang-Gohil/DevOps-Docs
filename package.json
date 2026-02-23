@@ -1,0 +1,22 @@
+{
+  "name": "devops-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gaurang-Gohil/DevOps-Docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gaurang-Gohil/DevOps-Docs/issues"
+  },
+  "homepage": "https://github.com/Gaurang-Gohil/DevOps-Docs#readme",
+  "dependencies": {
+    "http": "^0.0.1-security"
+  }
+}
