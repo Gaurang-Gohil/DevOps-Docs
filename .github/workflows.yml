@@ -1,0 +1,14 @@
+name: "Print SHA ID"
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs: 
+  print:
+    runs-on: ubuntu-latest
+    name: "Printing the SHA"
+    steps:
+      - name: "Print SHA"
+        run: echo ${{ github.sha }}

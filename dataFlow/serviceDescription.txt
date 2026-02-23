@@ -1,0 +1,19 @@
+1. Route 53: 
+    What            : DNS resolution service.
+    Use             : translates the IP with the domain/ domain purchase.
+    Implementation  : 1 hosted zone (*.arpdigital.io) with 9 records (5 routes to the IP, 2 routes to TLS certificate, 1 NS, 1 SOA)
+
+2. Global Accelerator:
+    What            : Faster traffic routing service.
+    Use             : Uses anycast networking method to find the nearest Edge locations to route the traffic via AWS's private and faster network.
+    Implementation  : 1 Listener only listens on port 443 TCP, 1 Endpoint group attached and in that the ARN of load balancer is attached.
+
+3. WAF:
+    What            : Securing the application. A firewall.
+    Use             : Set rules like IpRateLimiting, DDoS attack preventoin.
+    Implementation  : Attached to the ALB. Added the ALB in the WAF configuration.
+
+4. ALB: 
+    What            : Application Load Balancer.
+    Use             : Rule based routing to correct ecs service using target groups.
+    Implementation  : Added the target groups based on the services/ecs services.
